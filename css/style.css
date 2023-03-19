@@ -27,6 +27,32 @@
     padding: var(--size-16);
 }
 
+.navbar.sticky {
+    background: var(--white);
+    box-shadow: 0px 0px 20px rgba(48, 63, 100, 0.2);
+}
+
+.navbar.sticky .navbar-toggler span,
+.navbar.sticky .navbar-brand {
+    color: var(--font-color-light);
+}
+
+.navbar-toggler {
+    position: absolute;
+    right: var(--size-20);
+    top: var(--size-20);
+    outline: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.navbar-toggler span {
+    color: var(--white);
+    font-size: var(--size-20);
+    cursor: pointer;
+    pointer-events: none;
+}
+
 [aria-controls="navbarDropdown"] {
     display: none;
 }
@@ -42,7 +68,10 @@
     padding: 4.6875rem 0;
 }
 
-.bg-header { background-image: url(../assets/bg-header-1.jpg); }
+.bg-header {
+    background-image: url(../assets/bg-header-1.jpg);
+    padding: var(--size-150) 0;
+}
 
 .video-demo { background-image: url(../assets/bg-demo.jpg);}
 
@@ -90,8 +119,9 @@
     flex: 1;
 }
 
-.block-text {
-    padding-right: var(--size-50);
+.why-me-wrapper .block-text {
+    padding-right: var(--size-100);
+    max-width: 35rem;
 }
 
 .block-text span {
@@ -161,6 +191,7 @@
 .video-demo .block-text h2,
 .video-demo .block-text p {
     color: var(--white);
+    margin: var(--size-50) 0;
 }
 
 .video-btn {
@@ -198,7 +229,7 @@
 .pricing-table {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
-    gap: var(--size-18);
+    gap: var(--size-30);
     margin: auto;
     align-items: flex-start;
 }
@@ -206,7 +237,7 @@
 .price-card {
     background-color: var(--white);
     border-radius: 8px;
-    padding: var(--size-16);
+    padding: var(--size-40) var(--size-16);
 }
 
 .price-card .checked {
@@ -257,6 +288,10 @@
 
 .plan-btn-wrapper {
     text-align: center;
+}
+
+.plan-btn-wrapper a {
+    width: 100%;
 }
 
 .testimonials {
@@ -341,11 +376,13 @@ footer .footer-top {
 
 footer .footer-col {
     justify-self: center;
+    max-width: 250px;
 }
 
 .footer-top h5 {
     font-weight: 500;
     margin-bottom: var(--size-16);
+    font-size: var(--size-16);
 }
 
 .contact-info li {
@@ -371,6 +408,10 @@ div.service-wrapper p {
     color: #858497;
 }
 
+.service-wrapper h5 {
+    margin-bottom: initial;
+}
+
 .recent-posts {
     display: flex;
     margin-bottom: var(--size-16);
@@ -394,6 +435,7 @@ div.post-inner h6 {
 div.post-inner h6 a {
     color: var(--white);
     font-weight: 600;
+    font-size: 0.75rem;
 }
 
 footer .footer-bottom {
